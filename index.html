@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Create a custom LUT for OBS</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="index.js" async defer></script>
+    </head>
+    <body>
+        <div class="col">
+            <canvas id="LUT" width=512 height=512></canvas>
+            <button id="download">download this LUT</button>
+        </div>
+        <div class="col">
+            <canvas id="reference" width=512 height=512>
+                <img class="loader"></img>
+            </canvas>
+            <input type="file" id="load">
+        </div>
+        <div id="controls" class="controls">
+
+        </div>
+    </body>
+</html>

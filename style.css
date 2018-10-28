@@ -1,0 +1,43 @@
+div.controls {
+    border: 1px solid black;
+    margin: 1em;
+    padding: 1em;
+    background: #F0F0F0;
+}
+div.controls::before {
+    content: ' controls ';
+    display: inline-block;
+    position: relative;
+    overflow: visible;
+    top: calc(-2em + 3px);
+    background: white;
+    padding: 0 0.5em 3px;
+    border: 1px solid black;
+}
+
+div.col {
+    display: inline-block;
+    text-align: center;
+}
+
+canvas {
+    display: block;
+}
+
+#LUT {
+    background: #999;
+}
+
+#img {
+    max-width: 40vw;
+}
+
+img.loader {
+    max-width: 40vw;
+    opacity: 0.5;
+    background: #CCC;
+}
+
+label {
+    margin-right: 1em;
+}
