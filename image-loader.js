@@ -16,9 +16,11 @@ class ImageLoader {
 
         var reader = new FileReader();
         dom.listen(reader, `load`, fileLoadEvent => {
-            dom.listen(this.img, `load`, () => {
+            let updateImage = (evt) => {
                 this.onImageLoaded(this.img);
-            });
+                dom.forget(this.img, `load`, updateImage);
+            };
+            dom.listen(this.img, `load`, updateImage);
 
             this.img.src = fileLoadEvent.target.result;
         });

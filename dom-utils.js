@@ -3,6 +3,7 @@ function find(qs, e) { e = e || document.body; return e.querySelector(qs); }
 function add(e, t) { t = t || document.body; t.appendChild(e); }
 function remove(e) { e.parentNode.removeChild(e); }
 function listen(e, n, h) { e.addEventListener(n, h); }
+function forget(e, n, h) { e.removeEventListener(n, h); }
 function create(e, content, opts) {
     let r = document.createElement(e);
     if (content.forEach) {
@@ -19,7 +20,12 @@ function create(e, content, opts) {
 }
 
 const dom = {
-    find, add, remove, listen, create
-}
+    find,
+    add,
+    remove,
+    listen,
+    forget,
+    create
+};
 
 export { dom };
