@@ -14,7 +14,7 @@ That's what github pages are fo, so fire it up here: https://pomax.github.io/LUT
 
 ## I found a bug!
 
-You know where to find the [issue tracker](/issues) =)
+You know where to find the [issue tracker](https://github.com/Pomax/LUT-builder/issues) =)
 
 ## screenshots
 
