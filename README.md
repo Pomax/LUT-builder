@@ -18,4 +18,4 @@ You know where to find the [issue tracker](https://github.com/Pomax/LUT-builder/
 
 ## screenshots
 
-![image](https://user-images.githubusercontent.com/177243/47676985-37e4c500-db7b-11e8-8a9b-9e2907bbacbe.png)
+![47676985-37e4c500-db7b-11e8-8a9b-9e2907bbacbe](https://user-images.githubusercontent.com/177243/47677365-1fc17580-db7c-11e8-871f-6bc27a3761cf.png)
