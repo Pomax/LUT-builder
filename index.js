@@ -176,6 +176,8 @@ class LUT {
     }
 
     applyLUT() {
+        if (!this._referenceData) return;
+
         let pixels = this._referenceData.slice();
         let LUT = this.canvas.getContext("2d").getImageData(0, 0, 512, 512).data;
         let r, g, b,
