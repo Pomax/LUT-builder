@@ -1,10 +1,47 @@
-div.controls {
+.flex {
+    display: flex;
+}
+
+.flex .item {
+    width: 50%;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.stacked {
+    position: relative;
+    height: 512px;
+}
+
+.stacked canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.stacked canvas:hover {
+    opacity: 0;
+}
+
+.stacked img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    max-width: 512px;
+    max-height: 512px;
+}
+
+.controls {
     border: 1px solid black;
     margin: 1em;
     padding: 1em;
     background: #F0F0F0;
 }
-div.controls::before {
+
+.controls::before {
     content: ' controls ';
     display: inline-block;
     position: relative;
@@ -15,29 +52,17 @@ div.controls::before {
     border: 1px solid black;
 }
 
-div.col {
-    display: inline-block;
-    text-align: center;
+.controls label {
+    margin: 0 1em;
 }
 
-canvas {
-    display: block;
+input[type=range] {
+    width: 50%;
+    border: 1px solid black;
+    background: #ccc;
+    vertical-align: -5px;
 }
 
-#LUT {
-    background: #999;
-}
-
-#img {
-    max-width: 40vw;
-}
-
-img.loader {
-    max-width: 40vw;
-    opacity: 0.5;
-    background: #CCC;
-}
-
-label {
-    margin-right: 1em;
+fieldset {
+    border: none;
 }

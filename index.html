@@ -7,18 +7,21 @@
         <script src="index.js" async defer></script>
     </head>
     <body>
-        <div class="col">
-            <canvas id="LUT" width=512 height=512></canvas>
-            <button id="download">download this LUT</button>
-        </div>
-        <div class="col">
-            <canvas id="reference" width=512 height=512>
-                <img class="loader"></img>
-            </canvas>
-            <input type="file" id="load">
-        </div>
-        <div id="controls" class="controls">
+        <div class="flex">
+            <div class="item">
+                <canvas id="LUT" width="512" height="512"></canvas>
+                <button id="download">download this LUT</button>
+            </div>
 
+            <div class="item">
+                <div class="stacked">
+                    <canvas id="reference" width="512" height="512"></canvas>
+                    <img class="loader"></img>
+                </div>
+                <label>Load image to preview LUT <input type="file" id="load"></label>
+            </div>
         </div>
+
+        <div class="row controls" id="controls"></div>
     </body>
 </html>
