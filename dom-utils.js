@@ -6,10 +6,12 @@ function listen(e, n, h) { e.addEventListener(n, h); }
 function forget(e, n, h) { e.removeEventListener(n, h); }
 function create(e, content, opts) {
     let r = document.createElement(e);
-    if (content.forEach) {
-        content.forEach(c => r.appendChild(c));
-    } else {
-        r.innerHTML = content;
+    if (content) {
+        if (content.forEach) {
+            content.forEach(c => r.appendChild(c));
+        } else {
+            r.innerHTML = content;
+        }
     }
     if (opts) {
         Object.keys(opts).forEach(key => {

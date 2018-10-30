@@ -19,14 +19,23 @@ class LUT {
         this.redraw();
     }
 
+    addFilter(f) {
+        this.filters.push(f);
+    }
+
     setupControls() {
-        dom.add(Filters.setupCompressor(this), this.controls);
-        dom.add(Filters.setupSaturationForLightness(this), this.controls);
+        [   `compressor`,
+            `saturation_for_lightness`,
+            `color_filter`,
+            `black_curve`,
+            `mid_curve`,
+            `highlight_curve`,
+        ].forEach(f => dom.add(dom.create(`div`,[ Filters[f](this) ]),this.controls));
     }
 
     download() {
         let dataURL = this.canvas.toDataURL(); // defaults to png
-        let a = create(`a`, `download`, {
+        let a = dom.create(`a`, `download`, {
             download: `lut.png`,
             href: dataURL,
             style: `display: none`

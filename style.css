@@ -64,5 +64,13 @@ input[type=range] {
 }
 
 fieldset {
-    border: none;
+    background: #747681;
+    margin: 1em 0;
+    border: 1px solid #4d4d74;
+    padding: 0.25em 0;
+    color: #f5eed8;
+    font-family: Helvetica;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: 400;
 }
